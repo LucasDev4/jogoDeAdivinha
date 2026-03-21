@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --color1: #1c0b2b;
+    --color2: #daa520;
+    --color3: #1b033b;
+    --color4: #ffffff;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    background-color: var(--color1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+body::before {
+    --line: hsl(0 0% 95% / 0.25);
+    content: "";
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    background:
+        linear-gradient(90deg, var(--line) 1px, transparent 1px 10vmin) 0 -5vmin / 10vmin 10vmin,
+        linear-gradient(var(--line) 1px, transparent 1px 10vmin) 0 -5vmin / 10vmin 10vmin;
+    mask: linear-gradient(-15deg, transparent 30%, white);
+    top: 0;
+    z-index: -1;
+}
+
+.container,
+.containerResult,
+.containerLogin {
+    width: 600px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-around;
+    flex-direction: column;
+    border-radius: 8px;
+}
+
+.containerLogin {
+    background-color: #daa520;
+    font-size: 24px;
+    color: #1b033b;
+    height: 400px;
+    width: 400px;
+}
+.containerLogin button{
+    width: 200px;
+    height: 40px;
+    box-shadow: 2px 4px 10px rgb(0, 0, 0, 0.3);
+    border: none;
+    background-color: #1c0b2b;
+    color: #ffffff;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+.containerLogin input{
+    width: 60%;
+    height: 40px;
+    border-radius: 8px;
+    font-size: 14px;
+    border: none;
+    padding-left: 10px;
+    box-shadow: 2px 4px 8px rgb(0, 0, 0, 0.2);
+}
+.containerLogin button:hover{
+    transform: translateY(-5px);
+}
+.containerLogin,
+.containerResult {
+    background-color: var(--color2);
+    box-shadow: 2px 4px 8px rgb(0, 0, 0, 0.5);
+    color: var(--color1);
+    font-size: 20px;
+    justify-content: center;
+    gap: 40px;
+    width: 500px;
+    height: 400px;
+}
+.containerResult{
+    height: 500px;
+}
+#Resultados {
+    background-color: var(--color3);
+    border-radius: 8px;
+    width: 60%;
+    height: 300px;
+    box-shadow: 2px 4px 8px rgb(0, 0, 0, 0.3);
+    color: var(--color2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+}
+
+.containerResult button {
+    width: 50%;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    font-size: 20px;
+    font-weight: 500;
+    background-color: var(--color3);
+    color: var(--color2);
+    box-shadow: 2px 4px 8px rgb(0, 0, 0, 0.3);
+    transition: 0.5s ease;
+}
+
+.containerResult button:hover {
+    transform: translateY(-5px);
+}
+
+#Resultados h2 {
+    font-size: 23px;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.container h1 {
+    color: var(--color2);
+    font-size: 35px;
+}
+
+.container p {
+    color: rgba(218, 165, 32, 0.616);
+    font-size: 15px;
+}
+
+.tips {
+    background-color: var(--color2);
+    border-radius: 5px;
+    color: var(--color1);
+    width: 80%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    box-shadow: 2px 4px 8px rgb(0, 0, 0, 0.3);
+}
+
+.container button {
+    width: 200px;
+    height: 30px;
+    border: none;
+    background-color: var(--color2);
+    color: var(--color1);
+    box-shadow: 2px 4px 6px rgb(0, 0, 0, 0.2);
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.container button:hover {
+    transform: translateY(-3px);
+    box-shadow: 2px 4px 6px rgb(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 768px) {
+    .containerResult {
+        width: 300px;
+    }
+
+    #Resultados {
+        width: 70%;
+    }
+
+    .containerResult button {
+        width: 70%;
+        font-size: 17px;
+    }
+
+    #Resultados h2 {
+        font-size: 18px;
+    }
+
+    .containerResult h2 {
+        font-size: 26px;
+    }
+    .containerLogin{
+        width: 300px;
+        font-size: 18px;
+    }
+
+    .tips h3 {
+        font-size: 16px;
+    }
+}
